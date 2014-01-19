@@ -1,4 +1,4 @@
-require 'ssh_fingerprint'
+require 'ssh-fingerprint'
 
 describe 'Fingerprint' do
   let(:key) do
