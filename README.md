@@ -1,6 +1,6 @@
 ssh-fingerprint
 ===============
-[![Build Status](https://travis-ci.org/victorgama/has_gravatar.png?branch=master)](https://travis-ci.org/victorgama/ssh-fingerprint) [![Dependency Status](https://gemnasium.com/victorgama/has_gravatar.png)](https://gemnasium.com/victorgama/ssh-fingerprint)
+[![Build Status](https://travis-ci.org/victorgama/has_gravatar.png?branch=master)](https://travis-ci.org/victorgama/ssh-fingerprint) [![Dependency Status](https://gemnasium.com/victorgama/ssh-fingerprint.png)](https://gemnasium.com/victorgama/ssh-fingerprint)
 
 Generate a fingerprint given an SSH public key (without `ssh-keygen` or external dependencies)
 * based on [bahamas10/node-ssh-fingerprint](https://github.com/bahamas10/node-ssh-fingerprint)
