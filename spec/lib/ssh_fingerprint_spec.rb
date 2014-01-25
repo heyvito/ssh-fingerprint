@@ -1,4 +1,6 @@
 require 'ssh-fingerprint'
+require 'coveralls'
+Coveralls.wear!
 
 describe 'Fingerprint' do
   let(:key) do
@@ -7,6 +9,13 @@ describe 'Fingerprint' do
   
   # Obtained through ssh-keygen -lf ../support/id_rsa.pub
   let(:known_fingerprint) { 'f5:d8:39:1d:7c:26:0c:07:97:b2:d5:09:2f:dd:45:e4' }
+  
+  it 'should not break the key apart!' do
+    current_key = key.clone
+    used_key = key.clone
+    SSHFingerprint.compute(used_key)
+    used_key.should eq(current_key)
+  end
   
   it 'should match known fingerprint' do
     SSHFingerprint.compute(key).should eq(known_fingerprint)

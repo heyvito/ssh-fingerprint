@@ -7,10 +7,11 @@ class SSHFingerprint
     COLONS = /(.{2})(?=.)/
     
     def compute(key)
+      key = key.clone
       key.gsub!(PUBRE, '')
       key = Base64.decode64(key)
       key = Digest::MD5.hexdigest(key)
-      key.gsub(COLONS, '\1:')
+      key.gsub!(COLONS, '\1:')
     end
   end
 end
